@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cl10u4138dtbn"]
+
+[ext_resource type="PackedScene" uid="uid://dsk7c7wg0gaoi" path="res://Charater/Akai.tscn" id="1_42pap"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l7wmc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_u4cb1"]
+sky_material = SubResource("ProceduralSkyMaterial_l7wmc")
+
+[sub_resource type="Environment" id="Environment_r0boh"]
+background_mode = 2
+sky = SubResource("Sky_u4cb1")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_m31s6"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h0e2s"]
+data = PackedVector3Array(-10, 0.5, 10, 10, 0.5, 10, -10, -0.5, 10, 10, 0.5, 10, 10, -0.5, 10, -10, -0.5, 10, 10, 0.5, -10, -10, 0.5, -10, 10, -0.5, -10, -10, 0.5, -10, -10, -0.5, -10, 10, -0.5, -10, 10, 0.5, 10, 10, 0.5, -10, 10, -0.5, 10, 10, 0.5, -10, 10, -0.5, -10, 10, -0.5, 10, -10, 0.5, -10, -10, 0.5, 10, -10, -0.5, -10, -10, 0.5, 10, -10, -0.5, 10, -10, -0.5, -10, 10, 0.5, 10, -10, 0.5, 10, 10, 0.5, -10, -10, 0.5, 10, -10, 0.5, -10, 10, 0.5, -10, -10, -0.5, 10, 10, -0.5, 10, -10, -0.5, -10, 10, -0.5, 10, 10, -0.5, -10, -10, -0.5, -10)
+
+[node name="world" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r0boh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Akai" parent="Pivot" instance=ExtResource("1_42pap")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 0.942075, 0.335402, 0, -0.335402, 0.942075, 0.143187, 2.4737, 5.05262)
+fov = 59.7953
+
+[node name="Floor2" type="Node3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Floor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_m31s6")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor2/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h0e2s")
