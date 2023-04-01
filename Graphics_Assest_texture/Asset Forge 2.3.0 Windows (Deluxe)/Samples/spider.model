@@ -1,0 +1,30 @@
+# Made using Asset Forge (2.3.0)
+
+:materials
+
+[name:_defaultMat;color:RGBA(0.259, 0.249, 0.317, 1.000);scale:(1.0, 1.0);shader:Gradient;valueA:0.2;valueB:0.6;]
+[name:custom1;color:RGBA(0.077, 1.000, 0.599, 1.000);scale:(1.0, 1.0);shader:Gradient;valueA:0.2;valueB:0.25;]
+[name:custom2;color:RGBA(0.330, 0.320, 0.393, 1.000);scale:(1.0, 1.0);shader:Gradient;valueA:0.2;valueB:0.8;]
+
+:models
+
+[name:;collection:Animals;type:body_round;position:(0.0000, 0.7000, 0.7000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_spike;position:(-1.0270, -0.1442, 0.6951);rotation:(0.0000, 30.0000, 15.0000);scale:(0.8000, 0.8000, 0.8000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_shapeC;position:(-0.5420, 0.5758, 0.4151);rotation:(0.0000, 30.0000, 75.0000);scale:(0.8000, 0.8000, 0.8000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:leg_spike;position:(-1.4000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 15.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_spike;position:(-1.1681, 0.0000, -1.0189);rotation:(0.0000, 330.0000, 15.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_spike;position:(0.9473, -0.1442, 0.6951);rotation:(0.0000, 330.0000, 345.0000);scale:(-0.8000, 0.8000, 0.8000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_shapeC;position:(0.4623, 0.5758, 0.4151);rotation:(0.0000, 330.0000, 285.0000);scale:(-0.8000, 0.8000, 0.8000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:leg_spike;position:(1.3203, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 345.0000);scale:(-1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_shapeC;position:(0.6203, 0.9000, 0.0000);rotation:(0.0000, 0.0000, 285.0000);scale:(-1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:leg_shapeC;position:(0.4823, 0.9000, -0.6689);rotation:(0.0000, 30.0000, 285.0000);scale:(-1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:leg_spike;position:(1.0885, 0.0000, -1.0189);rotation:(0.0000, 30.0000, 345.0000);scale:(-1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_shapeC;position:(-0.7000, 0.9000, 0.0000);rotation:(0.0000, 0.0000, 75.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:leg_shapeC;position:(-0.5619, 0.9000, -0.6689);rotation:(0.0000, 330.0000, 75.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:custom2;]
+[name:;collection:Animals;type:body_round;position:(-0.2500, 0.7000, 1.0500);rotation:(0.0000, 0.0000, 0.0000);scale:(0.2400, 0.2400, 0.2400);group:;locked:False;hidden:False;materials:custom1;]
+[name:;collection:Animals;type:body_round;position:(0.2500, 0.7000, 1.0500);rotation:(0.0000, 0.0000, 0.0000);scale:(0.2400, 0.2400, 0.2400);group:;locked:False;hidden:False;materials:custom1;]
+[name:;collection:Animals;type:body_round;position:(0.1000, 0.7000, 1.1000);rotation:(0.0000, 0.0000, 0.0000);scale:(0.2400, 0.2400, 0.2400);group:;locked:False;hidden:False;materials:custom1;]
+[name:;collection:Animals;type:body_round;position:(-0.1000, 0.7000, 1.1000);rotation:(0.0000, 0.0000, 0.0000);scale:(0.2400, 0.2400, 0.2400);group:;locked:False;hidden:False;materials:custom1;]
+[name:;collection:Animals;type:body_long_ring;position:(0.0000, 1.1000, -0.4732);rotation:(30.0000, 0.0000, 0.0000);scale:(1.3200, 1.3200, 1.3200);group:;locked:False;hidden:False;materials:_defaultMat+custom1;]
+[name:;collection:Animals;type:leg_spike;position:(-0.1966, 0.2804, 1.0449);rotation:(330.0000, 0.0000, 345.0000);scale:(0.5000, 0.5000, 0.5000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Animals;type:leg_spike;position:(0.1966, 0.2804, 1.0449);rotation:(330.0000, 0.0000, 15.0000);scale:(0.5000, 0.5000, 0.5000);group:;locked:False;hidden:False;materials:_defaultMat;]

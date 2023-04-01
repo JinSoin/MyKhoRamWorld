@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2vc3jveud4f4"]
+
+[ext_resource type="Material" uid="uid://b8npyg6ux7edt" path="res://World/Shaders/Water.tres" id="2_74x1c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xn2p7"]
+size = Vector3(36, 12, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8m8mp"]
+size = Vector3(36, 12, 4)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rckcl"]
+
+[node name="WaterPlane" type="Node3D"]
+
+[node name="Water" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583424, 0)
+shape = SubResource("BoxShape3D_xn2p7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Water"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.583424, 0)
+transparency = 0.37
+cast_shadow = 0
+mesh = SubResource("BoxMesh_8m8mp")
+surface_material_override/0 = ExtResource("2_74x1c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.31261, 1.54358, 0)
+mesh = SubResource("CapsuleMesh_rckcl")

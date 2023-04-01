@@ -1,0 +1,6 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl stone-platform-color
+Kd 1 1 1
+map_Kd Textures/stone-platform-color.png
+

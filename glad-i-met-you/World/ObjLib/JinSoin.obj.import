@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnw6758yyrggc"
+path="res://.godot/imported/JinSoin.obj-e4b57d0d05abcb926aabf059866eb526.mesh"
+
+[deps]
+
+files=["res://.godot/imported/JinSoin.obj-e4b57d0d05abcb926aabf059866eb526.mesh"]
+
+source_file="res://World/ObjLib/JinSoin.obj"
+dest_files=["res://.godot/imported/JinSoin.obj-e4b57d0d05abcb926aabf059866eb526.mesh", "res://.godot/imported/JinSoin.obj-e4b57d0d05abcb926aabf059866eb526.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

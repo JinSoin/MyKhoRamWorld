@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfkyg0wqubrld"]
+
+[ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1_gdaek"]
+[ext_resource type="FontFile" uid="uid://b4kjnfg7l67u6" path="res://UI/broken-console/Broken Console Bold Shadow.ttf" id="3_5wpca"]
+[ext_resource type="Texture2D" uid="uid://bnnaq46ex8dwe" path="res://570563-galaxy-theme.jpg" id="3_eiwa1"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_i8v7y"]
+
+[node name="MainMenu" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gdaek")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.788
+anchor_right = 0.091
+anchor_bottom = 1.0
+offset_right = 90.72
+offset_bottom = 92.52
+grow_vertical = 0
+scale = Vector2(0.943654, 1.01043)
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+text = "Start game
+"
+
+[node name="SettingButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+text = "Quit
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8917, 16.1893)
+texture = SubResource("ImageTexture_i8v7y")
+
+[node name="Label" type="Label" parent="TextureRect"]
+top_level = true
+clip_children = 1
+offset_left = 149.0
+offset_top = 146.0
+offset_right = 1212.0
+offset_bottom = 251.0
+scale = Vector2(0.844995, 0.602672)
+theme_override_fonts/font = ExtResource("3_5wpca")
+theme_override_font_sizes/font_size = 50
+text = "Who ever you are, I'm glad I met you"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(269, 91)
+texture = ExtResource("3_eiwa1")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
